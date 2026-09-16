@@ -1,0 +1,25 @@
+# maillaunch.config.yaml
+#
+# Non-sensitive defaults only. Do NOT put client secrets or tokens
+# here -- see README.md "Credential handling" for where those go.
+
+provider: gmail                   # gmail | microsoft
+daily_limit: 100
+
+gmail:
+  client_id: "743615804749-vvbgong9u3f7c0augelqsgmaonrai2h4.apps.googleusercontent.com"
+  # client_secret is NOT read from this file. Set it via the
+  # MAILLAUNCH_GMAIL_CLIENT_SECRET environment variable, or leave it
+  # unset and `maillaunch auth gmail` will prompt for it once and
+  # store it in your OS keychain.
+
+microsoft:
+  client_id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+  # Microsoft auth uses a device-code flow with a public client, so no
+  # secret is required in the common case.
+
+send:
+  min_delay_seconds: 60
+  max_delay_seconds: 180
+  retry_failed: true
+  retry_attempts: 2

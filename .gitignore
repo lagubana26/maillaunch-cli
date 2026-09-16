@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+venv/
+.venv/
+*.egg-info/
+
+# Local runtime state -- never commit these
+.maillaunch/
+*.db
+*.log
+
+recipients.csv
+template.txt
